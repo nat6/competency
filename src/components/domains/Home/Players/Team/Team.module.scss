@@ -1,0 +1,608 @@
+@use "@/styles/utils/mixins";
+
+.team {
+  --team-item-background: var(--team-item-background-1);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: var(--item-border);
+  border-radius: var(--aboutGameItem-border-radius);
+
+  @include mixins.for-600-down {
+    width: 100%;
+    max-width: calc(100% - 18px);
+    justify-self: center;
+  }
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    @include mixins.flex-column-center;
+    box-shadow: var(--item-box-shadow);
+  }
+
+  &:nth-child(even) {
+    --team-item-background: var(--team-item-background-4);
+  }
+
+  &:nth-child(4n + 1) {
+    --team-item-background: var(--team-item-background-2);
+  }
+
+  &:nth-child(5n) {
+    --team-item-background: var(--team-item-background-3);
+  }
+
+  &:nth-child(8n) {
+    --team-item-background: var(--team-item-background-3);
+  }
+
+  //&.topWinner {
+  //  --border-color: #ad8a21;
+  //  --face: #ffd57e;
+  //  --head: #f3c94c;
+  //  --side: #bb853d;
+  //
+  //  .teamItem__headIconWrapper {
+  //    box-shadow: none;
+  //    background: transparent;
+  //    border: none;
+  //  }
+  //
+  //  .teamItem__headIcon {
+  //    display: flex;
+  //    flex-direction: column;
+  //    justify-content: center;
+  //    align-items: center;
+  //    box-shadow: none;
+  //    background: transparent;
+  //    background-image: none !important;
+  //    filter: none;
+  //  }
+  //}
+  //
+  //&.firstPlace {
+  //  --team-item-background: var(--team-item-background-4);
+  //
+  //  .teamItem__coin {
+  //    animation-delay: -3s;
+  //  }
+  //}
+  //
+  //&.secondPlace {
+  //  .teamItem__coin {
+  //    --border-color: #8a8a8a;
+  //    --face: #dad4e5;
+  //    --head: #c7bed7;
+  //    --side: #a0a0a0;
+  //  }
+  //
+  //  .teamItem__coinTail {
+  //    &:before {
+  //      content: "2";
+  //      padding-left: 1px;
+  //    }
+  //  }
+  //}
+  //
+  //&.thirdPlace {
+  //  --team-item-background: var(--team-item-background-1);
+  //
+  //  .teamItem__coin {
+  //    --border-color: #93574f;
+  //    --face: #ff9f89;
+  //    --head: #eb9784;
+  //    --side: #b06b62;
+  //
+  //    animation-delay: -5.5s;
+  //  }
+  //
+  //  .teamItem__coinTail {
+  //    &:before {
+  //      content: "3";
+  //      padding-left: 2px;
+  //    }
+  //  }
+  //}
+
+  &__head {
+    width: 100%;
+    height: 100%;
+    min-height: 56px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    font-weight: 400;
+    box-shadow: var(--item-box-shadow);
+    background: linear-gradient(to bottom, #73dde2, #55c2c5);
+    border: var(--item-border);
+    border-radius: var(--aboutGameItem-border-radius-inner);
+
+    @include mixins.for-600-down {
+      min-height: 40px;
+      padding: 8px;
+    }
+
+    &IconWrapper {
+      --head-icon-size: 55px;
+      --max-hue-rotate: 359deg;
+
+      width: var(--head-icon-size);
+      height: var(--head-icon-size);
+      margin: 5px;
+      margin-right: 16px;
+      background: radial-gradient(transparent 50%, black);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+
+      @include mixins.for-600-down {
+        --head-icon-size: 52px;
+        margin: 0 10px 0 2px;
+      }
+    }
+
+    &Icon {
+      position: relative;
+      z-index: -1;
+      @include mixins.iconBackgroundProperties;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  //&__coin {
+  //  width: var(--head-icon-size);
+  //  height: var(--head-icon-size);
+  //  position: relative;
+  //  box-shadow: 0 3px 5px 0 rgb(10 0 41);
+  //  border-radius: 50%;
+  //  transform: rotateY(0deg);
+  //  animation-name: rotation;
+  //  animation-duration: 15s;
+  //  animation-timing-function: linear;
+  //  animation-iteration-count: infinite;
+  //  transform-style: preserve-3d;
+  //
+  //  &Face {
+  //    width: 100%;
+  //    height: 100%;
+  //    position: absolute;
+  //    top: 0;
+  //    left: 0;
+  //    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.2);
+  //    border: 3px solid rgba(211, 177, 255, 0.13);
+  //    border-radius: 50%;
+  //    backface-visibility: hidden;
+  //  }
+  //
+  //  &Head {
+  //    z-index: 2;
+  //    background-color: var(--head);
+  //    transform: rotateY(0deg);
+  //    @include mixins.iconBackgroundProperties;
+  //  }
+  //
+  //  &Tail {
+  //    @include mixins.flex-center-center;
+  //    z-index: 1;
+  //    background: linear-gradient(135deg, var(--side) 0%, var(--face) 50%, var(--side) 100%);
+  //    background-color: var(--face);
+  //    transform: rotateY(180deg);
+  //
+  //    &:before {
+  //      content: "1";
+  //      font-size: 1.8rem;
+  //      font-weight: 700;
+  //      color: var(--tail-font-color);
+  //    }
+  //  }
+  //}
+
+  &__subtitle {
+    width: 100%;
+    margin: 0;
+    padding-right: 20px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-break: break-word;
+    text-shadow: var(--text-shadow-default);
+    color: white;
+
+    @include mixins.for-1920-up {
+      padding-right: 30px;
+    }
+
+    @include mixins.for-1279-down {
+      max-width: 220px;
+    }
+
+    @include mixins.for-1100-down {
+      max-width: 260px;
+    }
+
+    @include mixins.for-800-down {
+      font-size: 1.2rem;
+    }
+    @include mixins.for-600-down {
+      font-size: 1.1rem;
+      line-height: 100%;
+      letter-spacing: 0;
+    }
+
+    @include mixins.for-520-down {
+      max-width: 230px;
+    }
+
+    &_middle {
+      font-size: 1.1rem;
+      line-height: 100%;
+
+      @include mixins.for-800-down {
+        font-size: 1rem;
+      }
+
+      @include mixins.for-600-down {
+        font-size: 0.9rem;
+      }
+    }
+
+    &_small {
+      font-size: 0.9rem;
+      line-height: 100%;
+
+      @include mixins.for-800-down {
+        font-size: 0.8rem;
+      }
+    }
+
+    &_upperMiddle {
+      @include mixins.for-1920-up {
+        font-size: 1.13rem;
+      }
+    }
+  }
+
+  //&__additional {
+  //  margin: 0;
+  //  padding-bottom: 4px;
+  //  display: block;
+  //  font-size: 0.8rem;
+  //  line-height: 1rem;
+  //  letter-spacing: 2px;
+  //  text-shadow: var(--text-shadow-light);
+  //
+  //  @include mixins.for-1920-up {
+  //    padding-bottom: 6px;
+  //  }
+  //
+  //  @include mixins.for-600-down {
+  //    font-size: 0.66rem;
+  //    letter-spacing: 1px;
+  //  }
+  //
+  //  &_small {
+  //    font-size: 0.7rem;
+  //
+  //    .teamItem__technology {
+  //      line-height: 105%;
+  //
+  //      @include mixins.for-600-down {
+  //        font-size: 0.6rem;
+  //        line-height: 100%;
+  //      }
+  //    }
+  //  }
+  //}
+
+  //&__achievements {
+  //  position: absolute;
+  //  top: 8px;
+  //  right: 4px;
+  //
+  //  &Item {
+  //    width: 30px;
+  //    height: 100%;
+  //    position: relative;
+  //    line-height: 100%;
+  //    @include mixins.flex-center-center;
+  //    @include mixins.iconBackgroundProperties;
+  //
+  //    @include mixins.for-1920-up {
+  //      width: 40px;
+  //    }
+  //
+  //    &:hover {
+  //      &:before {
+  //        top: var(--top-pos);
+  //        visibility: visible;
+  //        opacity: 1;
+  //        transform: skew(170deg);
+  //      }
+  //    }
+  //
+  //    &:before {
+  //      --top-pos: -24px;
+  //
+  //      content: attr(data-team-part-tooltip);
+  //      width: 166px;
+  //      padding: 5px;
+  //      position: absolute;
+  //      top: calc(var(--top-pos) - 5px);
+  //      right: -20px;
+  //      visibility: hidden;
+  //      opacity: 0;
+  //      font-size: 0.5rem;
+  //      line-height: 100%;
+  //      text-align: center;
+  //      text-transform: uppercase;
+  //      box-shadow: 0 0 2px rgb(101, 69, 213),
+  //      0 4px 10px rgba(0, 0, 0, 0.2),
+  //      0 1px 5px rgba(0, 0, 0, 0.2);
+  //      color: white;
+  //      background: var(--achieves-tooltip-background);
+  //      border: var(--item-border);
+  //      border-radius: 4px;
+  //      transition: 0.4s;
+  //
+  //      @include mixins.for-1920-up {
+  //        --top-pos: -30px;
+  //
+  //        width: 260px;
+  //        padding: 8px 8px 6px;
+  //        font-size: 0.62rem;
+  //      }
+  //
+  //      @include mixins.for-600-down {
+  //        right: -8px;
+  //      }
+  //    }
+  //  }
+  //
+  //  &Part {
+  //    height: 24px;
+  //    margin-bottom: 6px;
+  //
+  //    @include mixins.for-1920-up {
+  //      height: 34px;
+  //    }
+  //
+  //    &:before {
+  //      width: 136px;
+  //    }
+  //  }
+  //
+  //  &Win {
+  //    height: 28px;
+  //  }
+  //}
+
+  &__text {
+    width: 100%;
+    padding: 25px 15px 20px 50px;
+    position: relative;
+    @include mixins.flex-column-center;
+    text-shadow: var(--text-shadow-light);
+    background: var(--team-item-background) !important;
+    border-top: 0;
+    border-radius: 0 0 0.7rem 0.7rem;
+
+    @include mixins.for-1920-up {
+      padding: 35px 20px 25px;
+    }
+
+    @include mixins.for-520-down {
+      padding: 20px 15px 5px 50px;
+    }
+  }
+
+  &__list {
+    width: auto;
+    min-width: 220px;
+    margin-left: 40px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    font-size: 1.05rem;
+
+    @include mixins.for-1920-up {
+      margin-left: 32px;
+    }
+
+    &Item {
+      margin-bottom: 12px;
+      position: relative;
+      color: white;
+      list-style-type: decimal;
+
+      @include mixins.for-1920-up {
+        margin-bottom: 14px;
+      }
+
+      @include mixins.for-800-down {
+        font-size: 1rem;
+      }
+
+      &::marker {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  &__members {
+    width: 90px;
+    min-height: 22px;
+    position: absolute;
+    top: 0;
+    left: -114px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include mixins.for-1920-up {
+      top: -2px;
+    }
+
+    &Item {
+      position: relative;
+      line-height: 100%;
+      @include mixins.flex-center-center;
+
+      &:hover {
+        &:before {
+          top: var(--top-pos);
+          visibility: visible;
+          opacity: 1;
+          transform: skew(170deg);
+        }
+      }
+
+      &:before {
+        --top-pos: -24px;
+
+        content: attr(data-team-part-tooltip);
+        width: 160px;
+        padding: 5px;
+        position: absolute;
+        top: calc(var(--top-pos) - 5px);
+        z-index: 5;
+        visibility: hidden;
+        opacity: 0;
+        font-size: 0.5rem;
+        line-height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        box-shadow: 0 0 2px rgb(101, 69, 213),
+        0 4px 10px rgba(0, 0, 0, 0.2),
+        0 1px 5px rgba(0, 0, 0, 0.2);
+        color: white;
+        background: var(--achieves-tooltip-background);
+        border: 1px solid rgba(211, 177, 255, 0.13);
+        border-radius: 4px;
+        transition: 0.4s;
+
+        @include mixins.for-1920-up {
+          --top-pos: -34px;
+
+          width: 260px;
+          left: -90px;
+          font-size: 0.62rem;
+        }
+
+        @include mixins.for-740-down {
+          left: 0;
+        }
+      }
+    }
+
+    &Win {
+      width: 30px;
+      height: 26px;
+      position: absolute;
+      bottom: -2px;
+      right: 34px;
+      @include mixins.iconBackgroundProperties;
+      opacity: 0.9;
+
+      @include mixins.for-1920-up {
+        width: 40px;
+        height: 30px;
+        right: 44px;
+      }
+
+      &:before {
+        --top-pos: -24px;
+        left: -30px;
+
+        @include mixins.for-1920-up {
+          --top-pos: -34px;
+          left: -40px;
+        }
+      }
+    }
+
+    &Part {
+      width: 30px;
+      height: 24px;
+      @include mixins.iconBackgroundProperties;
+      opacity: 0.9;
+
+      @include mixins.for-1920-up {
+        width: 40px;
+        height: 30px;
+      }
+
+      ~ .teamItem__membersWin {
+        right: 34px;
+
+        @include mixins.for-1920-up {
+          right: 44px;
+        }
+      }
+
+      &_great {
+        animation: 2s infinite alternate blinking;
+        filter: saturate(1.3) brightness(1.3);
+
+        @keyframes blinking {
+          from {
+            filter: saturate(1) brightness(0.9);
+            opacity: 0.9;
+          }
+
+          to {
+            filter: saturate(1.4) brightness(1.1);
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &Num {
+      z-index: 2;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-shadow: none;
+      color: #06676c;
+    }
+  }
+
+  //&__location {
+  //  margin-right: 6px;
+  //  display: inline-block;
+  //  color: #a4eeff;
+  //}
+  //
+  //&__technology {
+  //  margin-bottom: 2px;
+  //  line-height: 110%;
+  //  color: #bbf7ff;
+  //
+  //  @include mixins.for-600-down {
+  //    line-height: 100%;
+  //  }
+  //}
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}

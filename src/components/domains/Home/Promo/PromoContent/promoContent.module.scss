@@ -1,0 +1,69 @@
+@use "@/styles/utils/mixins";
+@use "@/styles/utils/animations" as *;
+
+.promoContent {
+  z-index: var(--z-index-section-inner);
+
+  &__inner {
+    max-width: 770px;
+    padding: 20px 40px;
+    position: relative;
+    @include mixins.flex-center-center;
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+      background: radial-gradient(var(--promo-background-top) 20%, transparent 70%);
+      transform: translate(-50%, -50%);
+    }
+
+    @include mixins.for-1920-up {
+      max-width: 970px;
+    }
+
+    @include mixins.for-1100-down {
+      max-width: 630px;
+    }
+
+    @include mixins.for-800-down {
+      max-width: 560px;
+    }
+
+    @include mixins.for-600-down {
+      max-width: 500px;
+    }
+
+    @include mixins.for-520-down {
+      max-width: 375px;
+      margin-bottom: 10px;
+      padding: 20px 30px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    z-index: var(--z-index-section-top-layer);
+    font-size: 1.15rem;
+    line-height: var(--default-line-height);
+    text-align: center;
+    text-shadow: var(--text-shadow-default);
+    color: #abf0f9;
+
+    @include mixins.for-1920-up {
+      font-size: 1.5rem;
+    }
+
+    @include mixins.for-1100-down {
+      font-size: 0.9rem;
+    }
+
+    @include mixins.for-520-down {
+      font-size: 0.8rem;
+    }
+  }
+}

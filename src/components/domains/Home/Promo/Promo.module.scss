@@ -1,0 +1,81 @@
+@use "@/styles/utils/mixins";
+
+.promo {
+  //--h: calc(0.866025403784 * var(--hex));      /* √3/2 * hex */
+  //--stepX: calc(var(--hex) + var(--gap));      /* ширина тайла */
+  //--stepY: calc(var(--h)   + var(--gap));      /* высота тайла */
+  //--offX: calc(var(--hex)/2 + var(--gap)/2);   /* сдвиг чётной строки */
+  //--offY: calc(var(--h)/2   + var(--gap)/2);
+  //
+  //background:
+  //    /* полосы для «нечётных» колонн */
+  //    repeating-linear-gradient(90deg,
+  //        var(--stripeA) 0 calc(var(--hex)/2),
+  //        transparent 0 var(--hex)) 0 0/ var(--stepX) 100% repeat,
+  //      /* те же полосы — для «чётных» колонн со сдвигом */
+  //    repeating-linear-gradient(90deg,
+  //        var(--stripeB) 0 calc(var(--hex)/2),
+  //        transparent 0 var(--hex)) var(--offX) 0/ var(--stepX) 100% repeat;
+  //--h: calc(0.866025403784 * var(--hex));   /* √3/2 * hex (высота гекса) */
+  //--stepX: calc(var(--hex) + var(--gap));   /* ширина тайла */
+  //--stepY: calc(var(--h)   + var(--gap));   /* высота тайла */
+  //--offX: calc(var(--hex)/2 + var(--gap)/2);
+  //--offY: calc(var(--h)/2   + var(--gap)/2);
+  //
+  //background:
+  //    linear-gradient(90deg, rgba(0,0,0,.03) 0 calc(var(--hex)/2), transparent 0 var(--hex)) 0 0/ var(--stepX) 100% repeat,
+  //    linear-gradient(90deg, rgba(0,0,0,.06) 0 calc(var(--hex)/2), transparent 0 var(--hex)) var(--offX) 0/ var(--stepX) 100% repeat;
+
+  height: 100vh;
+    padding: 0;
+    z-index: var(--z-index-section-gradient-overlay);
+
+  background: #d98a14;
+
+  //background: linear-gradient(to bottom, #d98a14 90%, #ffffff 100%);
+
+  padding-top: var(--header-height);
+
+  /* === ПАРАМЕТРЫ === */
+  //--hex: 120px;          /* ширина гекса (flat-top, между «плоскими» сторонами) */
+  //--gap: 2px;            /* прозрачный шов между гексами */
+  //--left:  #fffaf2;      /* левая половина внутри гекса */
+  //--right: #fffcf8;      /* правая половина внутри гекса */
+  --hex: 120px;          /* ширина гекса (между плоскими сторонами) */
+  --gap: 2px;            /* прозрачный шов между гексами */
+  --left:  #fffaf2;      /* левая половина внутри гекса */
+  --right: #fffcf8;      /* правая половина внутри гекса */
+
+  &:before {
+        display: none;
+    }
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        padding: calc(var(--promo-info-item-size) + 20px) 0 0;
+        @include mixins.flex-column-center;
+        justify-content: center;
+
+        @include mixins.for-520-down {
+            padding: calc(var(--promo-info-item-size) * 2 + 30px) 0 120px;
+        }
+    }
+}
+
+.promoRegistrationButton {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+
+    @include mixins.for-1100-down {
+        top: unset;
+        bottom: 20px;
+        right: 50%;
+        transform: translate(50%, 0);
+    }
+
+    @include mixins.for-520-down {
+        bottom: 30px;
+    }
+}

@@ -1,0 +1,107 @@
+@use "@/styles/utils/mixins";
+
+.partners {
+  padding-top: 190px;
+  padding-bottom: 150px;
+
+  &:after {
+    display: none;
+  }
+
+  @include mixins.for-850-down {
+    padding-top: 170px;
+    padding-bottom: 100px;
+  }
+
+  @include mixins.for-740-down {
+    padding-top: 150px;
+  }
+
+  @include mixins.for-520-down {
+    padding-bottom: 80px;
+  }
+
+  h2 {
+    margin-bottom: 100px;
+
+    @include mixins.for-850-down {
+      margin-bottom: 50px;
+    }
+
+    @include mixins.for-520-down {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 80px;
+
+    @include mixins.for-850-down {
+      grid-template-columns: 1fr;
+      grid-gap: 50px;
+    }
+  }
+
+  &__item {
+    --item-size: 220px;
+    width: var(--item-size);
+    height: var(--item-size);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: var(--bubble-opacity);
+    box-shadow: var(--bubble-box-shadow);
+    background: var(--bubble-gradient-4);
+    border: var(--bubble-border);
+    border-radius: 100%;
+    transition: var(--trans-basic);
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:not(:last-child) {
+      margin-right: 70px;
+
+      @include mixins.for-1920-up {
+        margin-right: 100px;
+      }
+
+      @include mixins.for-1100-down {
+        margin-right: 50px;
+      }
+
+      @include mixins.for-850-down {
+        margin-bottom: 50px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    width: 70%;
+    height: 70%;
+    transition: var(--trans-fast);
+    @include mixins.iconBackgroundProperties;
+  }
+
+  &__img {
+    width: 200px;
+
+    @include mixins.for-1280-up {
+      width: 150px;
+      height: auto;
+    }
+
+    @include mixins.for-740-down {
+      width: 200px;
+    }
+
+    @include mixins.for-520-down {
+      width: 160px;
+    }
+  }
+}

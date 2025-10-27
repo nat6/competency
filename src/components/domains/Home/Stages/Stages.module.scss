@@ -1,0 +1,39 @@
+@use "@/styles/utils/mixins";
+
+.stages {
+  --stages-fg: var(--font-color-1, #0f1222);
+
+  --hex-w: 120px;
+  --hex-h: 132px;
+}
+
+.stages {
+  position: relative;
+}
+
+.description {
+  width: 100%;
+  max-width: 980px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--stages-fg);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 0;
+  margin-top: clamp(12px, 1.6vw, 18px);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  max-width: 670px;
+}

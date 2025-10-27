@@ -1,0 +1,76 @@
+.container {
+  --bg-z: -1;
+}
+
+.container {
+  width: 100%;
+
+  //inset: 0;
+  height: calc(100% - 80px);
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  z-index: var(--bg-z);
+  overflow: hidden;
+  background: radial-gradient(1200px 800px at 85% -10%, rgba(255, 211, 65, 0.06), transparent 60%),
+  linear-gradient(180deg, var(--bg-honey-dark), var(--bg-honey-deep));
+  pointer-events: none;
+}
+
+.grid {
+  padding-top: 50px;
+  position: absolute;
+  inset: 0;
+}
+
+.row {
+  height: calc(var(--hex-h) + var(--gap) * 2);
+  margin-top: calc(var(--overlap) * -1);
+  padding-right: var(--gap);
+  padding-left: var(--gap);
+  display: inline-flex;
+}
+
+.rowOdd {
+  margin-left: calc(var(--hex-w) / 2);
+}
+
+.hex {
+  width: var(--hex-w);
+  height: var(--hex-h);
+  margin: var(--gap);
+  position: relative;
+  flex: 0 0 auto;
+  background: linear-gradient(90deg, var(--hex-left) 0 50%, var(--hex-right) 50% 100%);
+  border-radius: 12px;
+  transition: filter 160ms ease;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex::before {
+  content: "";
+  position: absolute;
+  opacity: .8;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 60%);
+  border-radius: 16px;
+  pointer-events: none;
+  inset: 0;
+  clip-path: inherit;
+  mix-blend-mode: screen;
+}
+
+.glow {
+  position: absolute;
+  background: radial-gradient(
+          circle at var(--mx) var(--my),
+          rgba(255, 233, 130, var(--glow-intensity)) 0%,
+          rgba(255, 215, 64, calc(var(--glow-intensity) * 0.75)) 22%,
+          rgba(255, 195, 40, calc(var(--glow-intensity) * 0.55)) 38%,
+          transparent 60%
+  );
+  transition: opacity 160ms ease;
+  pointer-events: none;
+  inset: -25vmax;
+  filter: blur(var(--glow-softness));
+  mix-blend-mode: screen;
+}

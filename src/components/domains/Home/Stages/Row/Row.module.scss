@@ -1,0 +1,102 @@
+.row {
+  --hex-left: #ffcc00;
+  --hex-right: #f9d300;
+  --row-bg: rgba(255, 211, 65, 0.08);
+  --row-bg-hover: rgba(255, 211, 65, 0.12);
+  --line-color: rgba(255, 211, 65, 0.22);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: var(--hex-h);
+  opacity: .9;
+  transition: opacity 160ms ease, background-color 160ms ease;
+  border-radius: 12px;
+  padding-right: clamp(8px, 1.2vw, 14px);
+
+  &:hover {
+    opacity: 1;
+
+  }
+}
+
+.row[data-id="requirements"] {
+  .hexTitle {
+    font-size: .76rem;
+  }
+}
+
+.row + .row {
+  margin-top: -32px;
+}
+
+.even {
+  margin-left: calc(var(--hex-w) / 2);
+
+  .hex {
+    background: linear-gradient(90deg, var(--hex-right) 0 50%, var(--hex-left) 50% 100%);
+  }
+}
+
+.hex {
+  width: var(--hex-w);
+  height: var(--hex-h);
+  margin: 1px;
+  position: relative;
+  flex: 0 0 auto;
+  background: linear-gradient(90deg, var(--hex-left) 0 50%, var(--hex-right) 50% 100%);
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  transition: filter 200ms ease, transform 260ms cubic-bezier(.2, .8, .2, 1);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+  //&::after {
+  //  content: "";
+  //  position: absolute;
+  //  top: 0; bottom: 0; right: -1px;
+  //  width: 1px;
+  //  background: var(--line-color);
+  //}
+}
+
+.hexTitle {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0 12px;
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(.9rem, 1.1vw, 1rem);
+  line-height: 1.1;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.textBar {
+  height: calc(var(--hex-h) / 2);
+  padding: 0 20px;
+  //margin-left: 1px;
+  //border: 1px solid red;
+  //padding: 0 clamp(12px, 1.8vw, 20px);
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  //background:
+  //    linear-gradient(180deg, rgba(255, 211, 65, 0.24), rgba(255, 211, 65, 0.12));
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  //overflow: hidden;
+  background: white;
+}
+
+.text {
+  margin: 0;
+  font-size: clamp(.95rem, 1.05vw, 1rem);
+  line-height: 1.5;
+  color: var(--stages-fg, #0f1222);
+  opacity: .95;
+  text-wrap: balance;
+}

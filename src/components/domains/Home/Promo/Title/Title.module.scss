@@ -1,0 +1,70 @@
+@use "@/styles/utils/mixins";
+@use "@/styles/utils/animations" as *;
+
+
+.title {
+  margin: 0 0 60px;
+  position: relative;
+  z-index: var(--z-index-section-inner);
+  text-align: center;
+
+  @include mixins.for-1279-down {
+    margin-bottom: 40px;
+  }
+
+  @include mixins.for-1100-down {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    --neon-text-light: rgba(255, 255, 255, .25);
+
+    margin: 0;
+    position: relative;
+    z-index: var(--z-index-section-top-layer);
+    font-size: 8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: -0.2rem -0.2rem 1rem var(--neon-text-light),
+    0.2rem 0.2rem 1rem var(--neon-text-light),
+    0 0 2rem var(--neon-text-color),
+    0 0 4rem var(--neon-text-color-2);
+
+    text-shadow: -0.2rem -0.2rem 1rem #d98b13,
+    0.2rem 0.2rem 1rem rgba(217, 139, 19, 0.7),
+    0 0 2rem rgba(217, 139, 19, 0.5),
+    0 0 3rem rgba(217, 139, 19, 0.2);
+    //color:     #4a1988;
+
+    color: white;
+
+    transform-origin: center;
+    //animation: promoTitle-beat 9s infinite alternate;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.3));
+
+    @include mixins.for-1920-up {
+      font-size: 13rem;
+    }
+
+    @include mixins.for-1100-down {
+      font-size: 8rem;
+    }
+
+    @include mixins.for-1000-down {
+      font-size: 7rem;
+    }
+
+    @include mixins.for-740-down {
+      --neon-text-light: rgb(171 241 250);
+
+      font-size: 4rem;
+    }
+
+    @include mixins.for-520-down {
+      font-size: 3.3rem;
+    }
+  }
+  &__subtitle {
+    font-size: 2.2rem;
+  }
+}

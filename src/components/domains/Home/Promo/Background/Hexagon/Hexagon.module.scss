@@ -1,0 +1,48 @@
+.hex {
+  --hex-bg: #2b1b05;
+  --hex-soft: #ffe899;
+  --hex-bright: #ffd500;
+  --hex-shine: rgba(255, 243, 171, 0.45);
+  --hex-border: rgba(255, 213, 0, 0.45);
+  --hex-shadow: 0 12px 36px rgba(0,0,0,0.22);
+}
+
+.hex {
+  position: relative;
+  width: var(--bg-hex-w);
+  height: var(--bg-hex-h);
+  margin: var(--bg-gap);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  transition: filter 200ms ease, transform 260ms cubic-bezier(.2, .8, .2, 1);
+
+  .surface {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    clip-path: inherit;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.08)) border-box,
+        linear-gradient(180deg, #3a2808, #1d1200);
+    border: 1px solid var(--hex-border);
+    box-shadow:
+        0 1px 0 rgba(255,255,255,0.18) inset,
+        0 0 0 1px rgba(255, 213, 0, 0.15),
+        var(--hex-shadow);
+    overflow: hidden;
+  }
+
+  .light {
+    position: absolute;
+    inset: -2px;
+    border-radius: 20px;
+    clip-path: inherit;
+    pointer-events: none;
+    background:
+        radial-gradient(180px 120px at 50% 20%, rgba(255,255,255,0.05), transparent 60%),
+        radial-gradient(28vmin 28vmin at var(--mx) var(--my), rgba(255, 222, 120, 0.24), transparent 50%);
+    mix-blend-mode: screen;
+    transition: opacity 220ms ease;
+  }
+}

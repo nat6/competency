@@ -1,0 +1,130 @@
+@mixin for-2100-up {
+  @media (min-width: 2100px) {
+    @content;
+  }
+}
+
+@mixin for-1920-up {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin for-1919-down {
+  @media (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin for-1400-down {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin for-1280-up {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin for-1279-down {
+  @media (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin for-1100-down {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin for-1000-up {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin for-1000-down {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin for-801-up {
+  @media (min-width: 801px) {
+    @content;
+  }
+}
+
+@mixin for-850-down {
+  @media (max-width: 850px) {
+    @content;
+  }
+}
+
+@mixin for-800-down {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin for-850-down {
+  @media (max-width: 850px) {
+    @content;
+  }
+}
+
+@mixin for-740-down {
+  @media (max-width: 740px) {
+    @content;
+  }
+}
+
+@mixin for-600-down {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-520-down {
+  @media (max-width: 520px) {
+    @content;
+  }
+}
+
+@mixin for-450-down {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
+@mixin flex-space-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin iconBackgroundProperties {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@mixin timelineItemDefault {
+  box-shadow: 0 0 4px rgb(39, 50, 56, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.2);
+  background: transparent;
+}

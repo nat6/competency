@@ -1,0 +1,121 @@
+@use "mixins";
+
+.competencyPage {
+  --box-shadow-default: 0 4px 12px 0 rgba(34, 14, 52, 0.5);
+  --box-shadow-mobile-submenu-item: 0 2px 14px 0 #000;
+  --box-shadow-intense: 0 2px 18px 0 rgb(34, 32, 52);
+
+  --header-height: 50px;
+
+  --z-index-noize-layer: 2;
+  --z-index-button: 10;
+  --z-index-top-overlay: 8;
+  --z-index-gradient-inner-layer: 3;
+  --z-index-header: 30;
+  --z-index-modal: 100;
+  --z-index-loader: 50;
+  --z-index-section-gradient-overlay: 4;
+  --z-index-section-inner: 5;
+
+  --main-background: #fff;
+
+  /* палитра (RGB-тройки) */
+  --c-yellow: 255 204 0;      /* жёлтый */
+  --c-orange: 255 138 0;      /* оранжевый */
+  --c-honey: 231 165 43;      /* медовый/янтарный */
+  --c-milky: 255 249 241;     /* очень мягкий молочный */
+  --c-gray: 230 232 236;      /* очень мягкий серый */
+
+  /* фон: белая база + мягкие радиальные пятна */
+  --main-background:
+      radial-gradient(900px 600px at 25% 8%,  rgb(var(--c-yellow) / 0.18) 0%, transparent 60%),
+      radial-gradient(1000px 700px at 70% 12%, rgb(var(--c-orange) / 0.16) 0%, transparent 55%),
+      radial-gradient(800px 550px at 35% 40%,  rgb(var(--c-honey) / 0.16) 0%, transparent 60%),
+      radial-gradient(900px 600px at 65% 50%,  rgb(var(--c-milky) / 0.45) 0%, transparent 60%),
+      radial-gradient(950px 650px at 50% 82%,  rgb(var(--c-honey) / 0.18) 0%, transparent 65%),
+      radial-gradient(1100px 700px at 30% 72%, rgb(var(--c-gray)  / 0.35) 0%, transparent 65%),
+      radial-gradient(1200px 800px at 20% 45%, rgb(var(--c-orange) / 0.10) 0%, transparent 70%),
+      radial-gradient(1400px 900px at 80% 65%, rgb(var(--c-yellow) / 0.10) 0%, transparent 75%),
+      radial-gradient(1000px 700px at 55% 30%, rgb(var(--c-gray)  / 0.22) 0%, transparent 70%),
+      radial-gradient(1100px 800px at 45% 60%, rgb(var(--c-milky) / 0.35) 0%, transparent 70%),
+      linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+
+   //--item-background-basic: radial-gradient(circle at center, #0f0f17, #1a1a27, #0b0b12),
+   //radial-gradient(400px 200px at 20% 20%, rgba(124, 77, 255, .04), transparent 6%),
+   //radial-gradient(300px 140px at 80% 80%, rgba(16, 185, 129, .03), transparent 6%),
+   //linear-gradient(180deg, #0b0b10, #0f1220);
+
+  //--item-background-basic:
+      //radial-gradient(circle at center, #ffffff, #fafafd, #f5f6fb),
+      //radial-gradient(400px 200px at 20% 20%, rgba(218, 248, 255, 0.06), transparent 60%),
+      //radial-gradient(300px 140px at 80% 80%, rgba(160, 177, 180, 0.05), transparent 60%),
+      //linear-gradient(180deg, #ffffff, #f6f7fb);
+
+  --yellow-1: #f9d300;
+  --yellow-2: #ffcc00;
+
+  --item-background-basic: linear-gradient(to bottom, var(--yellow-1), var(--yellow-2)100%);
+
+--item-border-basic: 1px solid rgba(255,255,255, 0.2);
+
+  --font-color-1: #d98a14; //#eff6ff;
+  --font-color-2: #cbd5e1;
+  --font-color-4: #94a3b8;
+  //--font-color-4: #b9c1ff;
+  //--font-color-5: #ad9ee3;
+  --font-color-opposite: #0b0a22;
+  --font-color: var(--font-color-1);
+  --font-color-text: var(--font-color-1);
+  --font-color-titles: #9982ee;
+
+  --text-shadow-default: 0 4px 4px var(--text-shadow-color);
+
+  --text-shadow-color: 1px 1px 3px rgba(90, 30, 120, 0.5),
+  2px 2px 6px rgba(40, 50, 120, 0.4),
+  3px 3px 10px rgba(20, 40, 90, 0.3);
+
+  --text-shadow-default: 0px 1px 1px rgba(90, 30, 120, 0.5),
+  0px 2px 2px rgba(90, 30, 120, 0.4),
+  0px 3px 3px rgba(90, 30, 120, 0.3),
+  0px 4px 8px rgba(0, 0, 0, 0.4);
+  --font-color-5: #64748b;
+
+  --promo-title-shadow: #00ffff;
+  --neon-text-color: var(--promo-title-shadow);
+
+  --neon-text-color-2: #17bcff;
+
+  --trans-basic: 0.4s;
+  --trans-fast: 0.2s;
+
+  --trans-slow: 0.8s;
+
+  --z-index-loader: 50;
+  --z-index-buttons: 10;
+  --z-index-gradient-inner-layer: 3;
+  --z-index-header: 30;
+  --z-index-overlay-layers: 2;
+  --z-index-section-gradient-overlay: 4;
+
+  --z-index-section-inner: 5;
+
+  --z-index-section-top-layer: 7;
+
+}
+
+.competencyPage {
+  //--hex: 120px;            /* ширина гекса (flat-top) */
+  //--gap: 2px;              /* прозрачный зазор между гексами */
+  //--left: #fffaf2;         /* левая половинка гекса */
+  //--right:#fffcf8;         /* правая половинка гекса */
+  //--stripeA: rgba(0,0,0,.035);
+  //--stripeB: rgba(0,0,0,.07);
+  --header-height: 65px;
+  --header-background: #fff;
+  --nav-item-border: 1px solid rgba(255, 255, 255, 0.1);
+  --header-font-color: #d98a14;
+
+  --nav-indicator-background-2: radial-gradient(#c9c9c9, #8d2b2b);
+
+  --nav-indicator-background: radial-gradient(#d7d7d7, #b2b2b2);
+}

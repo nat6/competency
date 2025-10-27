@@ -1,0 +1,94 @@
+@use "@/styles/utils/mixins";
+@use "@/styles/utils/animations" as *;
+
+.players {
+  --scroll-background: #3685a1;
+  --scroll-track-color: #203f59;
+
+  width: 100%;
+  min-height: 360px !important;
+  max-width: none;
+
+  @include mixins.for-520-down {
+    padding-right: 10px;
+  }
+  //
+  //h2 {
+  //  margin-bottom: 70px;
+  //
+  //  @include mixins.for-520-down {
+  //    margin-bottom: 30px;
+  //  }
+  //}
+
+  //&__empty {
+  //  padding: 20px;
+  //  text-align: center;
+  //  text-shadow: var(--text-shadow-default);
+  //  animation: teamsEmpty-beat 8s linear infinite;
+  //
+  //  @include mixins.for-600-down {
+  //    max-width: 300px;
+  //    font-size: 0.8rem;
+  //  }
+  //}
+
+  &__scroll {
+    width: 100%;
+    max-width: 1200px;
+    max-height: 700px;
+    padding: 0 25px;
+    position: relative;
+    z-index: 5;
+    overflow-y: scroll;
+
+    @include mixins.for-1920-up {
+      max-width: 1800px;
+      max-height: 1060px;
+      margin-left: 30px;
+    }
+
+    @include mixins.for-600-down {
+      padding: 0 10px 0 0;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: var(--scroll-track-color);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      height: 120px;
+      background: var(--scroll-background);
+      border-radius: 0;
+    }
+  }
+
+  &__grid {
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include mixins.for-1920-up {
+      max-width: 1800px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    @include mixins.for-1100-down {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixins.for-850-down {
+      grid-template-columns: 1fr;
+    }
+  }
+}

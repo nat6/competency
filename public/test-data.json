@@ -1,0 +1,184 @@
+{
+  "teams": [
+    {
+      "name": "Hackstreet Boys",
+      "teamID": "0a93b2c1-4f2e-7d10-8a9b-1f23e4d5c6b7",
+      "lead": { "name": "Liam Parker" },
+      "members": [
+        { "name": "Maya Thompson" },
+        { "name": "Ethan Brooks" }
+      ]
+    },
+    {
+      "name": "Runtime Terrors",
+      "teamID": "1b5e8d3a-9c01-4a2f-86e3-0d9f2b7c5a11",
+      "lead": { "name": "Zoe Nguyen" },
+      "members": [
+        { "name": "Oliver Kim" },
+        { "name": "Ava Rossi" }
+      ]
+    },
+    {
+      "name": "Null Pointer Ninjas",
+      "teamID": "2c7d1e4f-3b2a-6c90-9f81-a3b5c7d9e011",
+      "lead": { "name": "Noah Patel" },
+      "members": [
+        { "name": "Sophia Martin" },
+        { "name": "Jack Rivera" }
+      ]
+    },
+    {
+      "name": "Merge Conflict Club",
+      "teamID": "3da1f0b2-8e4c-5d3a-9a77-2e4f6c8b0d22",
+      "lead": { "name": "Aria Johnson" },
+      "members": [
+        { "name": "Lucas Bennett" },
+        { "name": "Ella Carter" }
+      ]
+    },
+    {
+      "name": "Git Push Force",
+      "teamID": "4e12a3c4-7b8d-4e1f-8c90-3f6a5b7c9d33",
+      "lead": { "name": "Mason Clark" },
+      "members": [
+        { "name": "Layla Hughes" },
+        { "name": "Wyatt Foster" }
+      ]
+    },
+    {
+      "name": "404 Brain Not Found",
+      "teamID": "5f23b4d5-6c9e-7a20-9d01-4a7b8c9d0e44",
+      "lead": { "name": "Chloe Adams" },
+      "members": [
+        { "name": "Henry Walsh" },
+        { "name": "Isla Morgan" }
+      ]
+    },
+    {
+      "name": "The Rubber Duckies",
+      "teamID": "6a34c5e6-5d0f-4b31-8e12-5b8c9d0e1f55",
+      "lead": { "name": "Elijah Turner" },
+      "members": [
+        { "name": "Nora Coleman" },
+        { "name": "Caleb Stewart" }
+      ]
+    },
+    {
+      "name": "Cache Me If You Can",
+      "teamID": "7b45d6f7-4e10-5c42-9f23-6c9d0e1f2a66",
+      "lead": { "name": "Mila Ortiz" },
+      "members": [
+        { "name": "Jayden Reed" },
+        { "name": "Luna Barrett" }
+      ]
+    },
+    {
+      "name": "Byte Me Maybe",
+      "teamID": "8c56e7a8-3f21-6d53-8a34-7d0e1f2a3b77",
+      "lead": { "name": "Aiden Lewis" },
+      "members": [
+        { "name": "Violet Hayes" },
+        { "name": "Evan Murray" }
+      ]
+    },
+    {
+      "name": "Ctrl Alt Defeat",
+      "teamID": "9d67f8b9-2a32-7e64-9b45-8e1f2a3b4c88",
+      "lead": { "name": "Ruby Allen" },
+      "members": [
+        { "name": "Miles Harper" },
+        { "name": "Ivy Simmons" }
+      ]
+    },
+    {
+      "name": "Stack Overflowers",
+      "teamID": "aa78c9da-1b43-4f75-8c56-9f2a3b4c5d99",
+      "lead": { "name": "James Patel" },
+      "members": [
+        { "name": "Hazel Nguyen" },
+        { "name": "Leo Armstrong" }
+      ]
+    },
+    {
+      "name": "JSON Bourne",
+      "teamID": "bb89dade-0c54-5a86-9d67-a0b1c2d3e4aa",
+      "lead": { "name": "Scarlett Young" },
+      "members": [
+        { "name": "Owen Castillo" },
+        { "name": "Ellie Parsons" }
+      ]
+    },
+    {
+      "name": "Promise.all Settled",
+      "teamID": "c0a1ebef-9d65-6b97-8e78-b1c2d3e4f5bb",
+      "lead": { "name": "Benjamin Cruz" },
+      "members": [
+        { "name": "Zara Shah" },
+        { "name": "Nolan Pierce" }
+      ]
+    },
+    {
+      "name": "Pirates of the Kernel",
+      "teamID": "d1b2fc01-8e76-7ca8-9f89-c2d3e4f5a6cc",
+      "lead": { "name": "Avery Morales" },
+      "members": [
+        { "name": "Colin Weaver" },
+        { "name": "Naomi Blake" }
+      ]
+    },
+    {
+      "name": "Commit & Conquer",
+      "teamID": "e2c30d12-7f87-4db9-8a9a-d3e4f5a6b7dd",
+      "lead": { "name": "Victoria Chen" },
+      "members": [
+        { "name": "Felix Duncan" },
+        { "name": "Maya Patel" }
+      ]
+    },
+    {
+      "name": "Infinite Loopers",
+      "teamID": "f3d41e23-6a98-5eca-9bab-e4f5a6b7c8ee",
+      "lead": { "name": "Daniel Rivera" },
+      "members": [
+        { "name": "Piper Watts" },
+        { "name": "Grayson Ellis" }
+      ]
+    },
+    {
+      "name": "The Semicolon Savers",
+      "teamID": "0e54f034-5ba9-6fdb-8cbc-f5a6b7c8d9ff",
+      "lead": { "name": "Harper Diaz" },
+      "members": [
+        { "name": "Theo Richards" },
+        { "name": "Quinn Wallace" }
+      ]
+    },
+    {
+      "name": "Bit Please",
+      "teamID": "1f650145-4cba-7aec-9dcd-0a1b2c3d4e10",
+      "lead": { "name": "Samuel Gardner" },
+      "members": [
+        { "name": "Jade Holloway" },
+        { "name": "Oscar Flynn" }
+      ]
+    },
+    {
+      "name": "The Devlinquents",
+      "teamID": "20860256-3dcb-4bfd-8ede-1b2c3d4e5f21",
+      "lead": { "name": "Paisley Brooks" },
+      "members": [
+        { "name": "Riley Thornton" },
+        { "name": "Archer Patel" }
+      ]
+    },
+    {
+      "name": "Snake Case Syndicate",
+      "teamID": "31971367-2edc-5c0e-9fef-2c3d4e5f6a32",
+      "lead": { "name": "Nathan Steele" },
+      "members": [
+        { "name": "Autumn Wells" },
+        { "name": "Roman Burke" }
+      ]
+    }
+  ]
+}

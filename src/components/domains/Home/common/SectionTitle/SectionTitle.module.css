@@ -1,0 +1,29 @@
+.sectionTitle {
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    color: var(--font-color-titles);
+    text-shadow: var(--text-shadow-color);
+}
+
+.sectionTitle::before {
+    content: "";
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    top: 50%;
+    height: 40%;
+    transform: translateY(-50%);
+    z-index: -1;
+    background: var(--section-title-bg);
+}
+
+.letter {
+    display: inline-block;
+}

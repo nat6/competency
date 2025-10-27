@@ -1,0 +1,170 @@
+// promo
+@keyframes infoItem-pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes infoItem-highlight {
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes interactiveBackground-back-gradient {
+  0% {
+    transform: translateY(-100%);
+  }
+  25% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes interactiveBackground-hovered-item {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes promoTitle-beat {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes promoPulse {
+  0% {
+    opacity: 0.1;
+  }
+  11% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 0.4;
+  }
+  15% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.1;
+  }
+
+  33% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 1;
+  }
+  46% {
+    opacity: 0.1;
+  }
+
+  54% {
+    opacity: 1;
+  }
+  56% {
+    opacity: 0.5;
+  }
+  61% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.1;
+  }
+
+  78% {
+    opacity: 1;
+  }
+  83% {
+    opacity: 0.3;
+  }
+  87% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+// registration button
+@keyframes registrationButton-hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+}
+
+@keyframes registrationButton-ripple {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  20% {
+    transform: translate(-100%, -100%) scale(50);
+  }
+  25% {
+    transform: translate(-100%, -100%) scale(50);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-100%, -100%) scale(50);
+    opacity: 0;
+  }
+}
+
+@keyframes registrationButton-fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes teamsEmpty-beat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loaderRotate {
+  from {
+    --rotation: 90;
+  }
+  to {
+    --rotation: 450;
+  }
+}

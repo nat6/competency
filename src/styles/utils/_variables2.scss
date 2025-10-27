@@ -1,0 +1,479 @@
+@use "mixins";
+
+.testPage {
+  --action-button-bg-default: linear-gradient(to right, #00BCD4, #6366f1);
+
+  --award-item-background: var(--technologies-background);
+  --award-badges-background: rgba(255, 255, 255, 0.08);
+
+  --advantages-tag-background: linear-gradient(to top, #00000075, #00000061);
+
+  --advantages-hint-icon-background: rgba(255, 255, 255, 0.2);
+  --advantages-hint-background: rgba(255, 255, 255, 0.05);
+
+  --box-shadow-default: 0 4px 12px 0 rgba(34, 14, 52, 0.5);
+  --box-shadow-mobile-submenu-item: 0 2px 14px 0 #000;
+  --box-shadow-intense: 0 2px 18px 0 rgb(34, 32, 52);
+
+  --technologies-background: radial-gradient(circle at center, #0f0f17, #1a1a27, #0b0b12),
+  radial-gradient(400px 200px at 20% 20%, rgba(124, 77, 255, 0.04), transparent 6%),
+  radial-gradient(300px 140px at 80% 80%, rgba(16, 185, 129, 0.03), transparent 6%),
+  linear-gradient(180deg, #0b0b10 0%, #0f1220 100%);
+
+  --technology-tooltip-background: #140520;
+
+  --technology-item-transition: transform 400ms cubic-bezier(.2, .9, .2, 1);
+
+  --header-height: 65px;
+
+  --subNav-background: rgba(255, 255, 255, 0.1);
+
+  --header-background: radial-gradient(800px 600px at 14% 0%, rgba(25, 4, 40, 0.92), transparent),
+  radial-gradient(700px 500px at 86% 100%, rgba(0, 70, 120, 0.08), transparent),
+  linear-gradient(180deg, rgba(6, 6, 8, 1), rgba(2, 2, 3, 1));
+
+  --navItem-background: radial-gradient(800px 600px at 14% 0%, rgba(25, 4, 40, 0.8), transparent),
+  radial-gradient(700px 500px at 86% 100%, rgba(0, 70, 120, 0.08), transparent),
+  linear-gradient(180deg, rgba(6, 6, 8, 0.75), rgba(2, 2, 3, 0.75));
+
+  --promo-overlay-background-first: linear-gradient(to bottom right, rgb(55 9 53 / 50%), rgb(55 10 54 / 50%));
+
+  --promo-overlay-background-second: linear-gradient(#000 1px, #0000 0),
+  linear-gradient(90deg, #000, #0000, #000),
+  linear-gradient(in oklch longer hue -2deg, rgba(170, 0, 0, 0.7), rgba(170, 0, 0, 0.7));
+
+  --promo-background: #692083;
+
+  --z-index-noize-layer: 2;
+  --z-index-button: 10;
+  --z-index-top-overlay: 8;
+  --z-index-gradient-inner-layer: 3;
+  --z-index-header: 30;
+  --z-index-modal: 100;
+  --z-index-loader: 50;
+  --z-index-section-gradient-overlay: 4;
+  --z-index-section-inner: 5;
+
+  --font-color-1: #eff6ff;
+  --font-color-2: #cbd5e1;
+  --font-color-4: #94a3b8;
+  --font-color-5: #64748b;
+
+  --main-background: radial-gradient(900px 600px at 25% 8%, rgba(118, 32, 87, 0.22) 0%, transparent 60%),
+  radial-gradient(1000px 700px at 70% 12%, rgba(40, 50, 120, 0.18) 0%, transparent 55%),
+  radial-gradient(800px 550px at 35% 40%, rgba(90, 30, 120, 0.18) 0%, transparent 60%),
+  radial-gradient(900px 600px at 65% 50%, rgba(30, 50, 100, 0.16) 0%, transparent 60%),
+  radial-gradient(950px 650px at 50% 82%, rgba(140, 30, 90, 0.22) 0%, transparent 65%),
+  radial-gradient(1100px 700px at 30% 72%, rgba(20, 40, 90, 0.18) 0%, transparent 65%),
+  radial-gradient(1200px 800px at 20% 45%, rgba(60, 100, 200, 0.12) 0%, transparent 70%),
+  radial-gradient(1400px 900px at 80% 65%, rgba(80, 160, 220, 0.1) 0%, transparent 75%),
+  radial-gradient(1000px 700px at 55% 30%, rgba(100, 80, 200, 0.11) 0%, transparent 70%),
+  radial-gradient(1100px 800px at 45% 60%, rgba(50, 120, 180, 0.1) 0%, transparent 70%),
+  linear-gradient(180deg, #1a0a28 0%, #0d1424 100%);
+
+  --text-shadow-color: 1px 1px 3px rgba(90, 30, 120, 0.5),
+  2px 2px 6px rgba(40, 50, 120, 0.4),
+  3px 3px 10px rgba(20, 40, 90, 0.3);
+
+  --text-shadow-default: 0px 1px 1px rgba(90, 30, 120, 0.5),
+  0px 2px 2px rgba(90, 30, 120, 0.4),
+  0px 3px 3px rgba(90, 30, 120, 0.3),
+  0px 4px 8px rgba(0, 0, 0, 0.4);
+
+  --text-shadow-promo-title: 0.003125em 0.003125em 0.009375em rgba(90, 30, 120, .5),
+  0.00625em 0.00625em 0.01875em rgba(40, 50, 117, .4),
+  0.009375em 0.009375em 0.03125em rgba(20, 40, 90, .3),
+  0 0.01875em 0.125em rgba(0, 0, 0, .6);
+
+  --section-title-bg: linear-gradient(90deg, rgb(255 0 143 / 40%), rgba(255, 255, 255, 0));
+
+  --interactive-test-layer-background: rgba(255, 255, 255, 0.02);
+  --interactive-test-chart-background: rgba(30, 37, 59, 0.4);
+  --interactive-test-feature-border: rgba(255, 255, 255, 0.08);
+  --interactive-test-top-background: rgba(30, 37, 59, 0.6);
+  --interactive-test-button-background: rgba(255, 255, 255, 0.06);
+  --interactive-test-button-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.06));
+  --interactive-test-button-gradient-hover: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.07));
+
+  --trait-bar-background: #0c0c14;
+
+  --vote-button-bg-interactive: linear-gradient(90deg, #06b6d4, #7c3aed);
+  --vote-button-bg-default: linear-gradient(to right, #ff4081, #9b4ed7, #00BCD4);
+  --vote-button-bg-header: linear-gradient(135deg, #ec4899, #6366f1);
+
+  --interactive-test-background: radial-gradient(circle at center, #1a1a27, #0b0b12),
+  radial-gradient(400px 200px at 20% 20%, rgba(124, 77, 255, 0.04), transparent 6%),
+  radial-gradient(300px 140px at 80% 80%, rgba(16, 185, 129, 0.03), transparent 6%),
+  linear-gradient(180deg, #0b0b10 0%, #0f1220 100%);
+
+  --interactive-test-modal: linear-gradient(rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04)),
+  radial-gradient(circle at center, #1a1a27, #0b0b12),
+  radial-gradient(400px 200px at 20% 20%, rgba(124, 77, 255, 0.04), transparent 6%),
+  radial-gradient(300px 140px at 80% 80%, rgba(16, 185, 129, 0.03), transparent 6%),
+  linear-gradient(180deg, #0b0b10 0%, #0f1220 100%);
+}
+
+@media (min-width: 1920px) {
+  .competencyPage {
+    --header-height: 74px;
+  }
+}
+
+.competencyPage {
+  --aboutGameItem-background: linear-gradient(#17223b, #1c9ad1);
+
+  --aboutGameItem-background-2: linear-gradient(#7a5b11, #d6d637);
+  --aboutGameItem-background-2-reversed: linear-gradient(#d6d637, #7a5b11);
+  --aboutGameItem-background-3: linear-gradient(#4c1536, #bc3285);
+  --aboutGameItem-background-3-reversed: linear-gradient(#bc3285, #4c1536);
+  --aboutGameItem-background-reversed: linear-gradient(#1c9ad1, #17223b);
+
+  --aboutGameItem-border-radius: 10px;
+  --aboutGameItem-border-radius-inner: calc(var(--aboutGameItem-border-radius) - var(--aboutGameItem-border-width) / 2);
+  --aboutGameItem-border-width: 5px;
+  --aboutGameItem-color-first: var(--common-gradient-color-1);
+
+  --aboutGameItem-color-second: var(--common-gradient-color-2);
+  --aboutGameItem-height: 170px;
+
+  --aboutGameItem-icon-size: 100px;
+  --aboutGameItem-scale-x: 0.78;
+  --aboutGameItem-scale-y: 1.28;
+  --aboutGameItem-sides-padding: 17px;
+  --aboutGameItem-verticals-padding: 8px;
+  --aboutGameItem-width: 220px;
+  --accent-color-1: var(--pink-1);
+  --accent-color-2: var(--pink-2);
+  --achieves-tooltip-background: #00a7b2;
+  --blue-bright: #18bcff;
+  --bubble-border: var(--item-border);
+
+  --bubble-box-shadow: var(--item-box-shadow);
+
+  --bubble-color: white;
+  --bubble-gradient: radial-gradient(var(--accent-color-1), #1d313d);
+  --bubble-gradient-1: radial-gradient(var(--accent-color-2), #21000a);
+  --bubble-gradient-2: radial-gradient(#17bcff, #1d313d);
+
+  --bubble-gradient-3: radial-gradient(var(--yellow-3), #4f4f00);
+  --bubble-gradient-4: radial-gradient(#58c0e6, #0b79a1);
+  --bubble-gradient-light-1: radial-gradient(var(--accent-color-2), #21000a);
+  --bubble-gradient-light-2: radial-gradient(#17bcff, #21749c);
+  --bubble-gradient-light-3: radial-gradient(var(--yellow-3), #93941c);;
+
+  --bubble-opacity: 0.9;
+  --common-gradient-color-1: #4d2393;
+  --common-gradient-color-2: #295068;
+
+  --common-gradient-color-3: #164a8c;
+  --common-gradient-color-4: #542773;
+
+  --common-gradient-color-5: #723e76;
+
+  --dark-15: #050a1b;
+  --dark-7: #120911;
+  --default-background: black;
+  --default-font-size: 1.25rem;
+
+  --default-line-height: 120%;
+  --divider-block-height: 100px;
+
+  --divider-transform-angle: -2.8deg;
+  --float-animation-translate: 10px;
+
+  --float-translateX: 0;
+  --font-color: #abf0f9;
+  --font-color-2: #a8a1bf;
+  --font-color-4: #b9c1ff;
+  --font-color-5: #ad9ee3;
+  --font-color-opposite: #0b0a22;
+
+  --font-color-opposite-light: var(--font-color-opposite);
+  --font-color-text: var(--font-color-4);
+  --font-color-text: var(--font-color);
+
+  --font-color-titles: #b2bcf8;
+  --font-color-titles: var(--font-color);
+
+  --gamethones-overlay-gradient-color: var(--section-background-color-2-sides);
+
+  --gamethones-scroll-background: #203f59;
+  --gamethones-scroll-track: #3685a1;
+
+  --gamethones-slider-sides-padding: 400px;
+  --header-background: #000000;
+  --header-font-color: var(--font-color);
+
+  --header-height: 50px;
+  --highlight-color: #043e61;
+  --icons-gradient: linear-gradient(45deg, #a1e5ff 30%, #ffffff 60%, #deccff 100%);
+
+  --item-border: 1px solid rgba(255, 255, 255, 0.1);
+
+  --item-box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+  --item-box-shadow-rotate: rgba(0, 0, 0, 0.17) 0px 23px 25px 0px inset,
+  rgba(0, 0, 0, 0.15) 0px 36px 30px 0px inset,
+  rgba(0, 0, 0, 0.1) 0px 79px 40px 0px inset,
+  rgba(0, 0, 0, 0.06) 0px -2px 1px,
+  rgba(0, 0, 0, 0.09) 0px -4px 2px,
+  rgba(0, 0, 0, 0.09) 0px -8px 4px,
+  rgba(0, 0, 0, 0.09) 0px -16px 8px,
+  rgba(0, 0, 0, 0.09) 0px -32px 16px;
+
+  --loader-bg-wrapper-color: transparent;
+  --loader-bg-color: black;
+  --loader-bg-inner: black;
+  --loader-size: 100px;
+  --loader-width: 8px;
+
+  --loader-bg-wrapper-color_page: black;
+  --loader-bg-color_page: black;
+  --loader-bg-inner_page: black;
+  --loader-size_page: 240px;
+  --loader-width_page: 10px;
+
+  --logo-color-gradient: linear-gradient(var(--logo-first-color) 30%, var(--logo-second-color) 50%, var(--logo-third-color) 70%);
+  --logo-first-color: #8be7f9;
+
+  --logo-pure-first-color: #a1e5ff;
+  --logo-pure-gradient: linear-gradient(
+          var(--logo-pure-first-color) 20%,
+          var(--logo-pure-second-color) 50%,
+          var(--logo-pure-third-color));
+  --logo-pure-second-color: #ffffff;
+  --logo-pure-third-color: #8454cb;
+  --logo-second-color: #ffffff;
+
+  --logo-third-color: #622cb0;
+  --nav-item-basic-height: 38px;
+  --nav-item-main-height: 42px;
+  --nav-item-mobile-border-radius: 10px;
+
+  --nav-item-sides-padding: 16px;
+  --nav-items-text-color: #ffffff;
+
+  --navigation-item-background: linear-gradient(to bottom,
+      var(--navigation-item-background-first),
+      var(--navigation-item-background-second),
+      var(--navigation-item-background-third));
+  --navigation-item-background-active: linear-gradient(to bottom,
+      var(--navigation-item-background-active-first),
+      var(--navigation-item-background-active-second),
+      var(--navigation-item-background-active-third));
+  --navigation-item-background-active-first: #1d1a25;
+  --navigation-item-background-active-second: #544e61;
+
+  --navigation-item-background-active-third: #706881;
+  --navigation-item-background-first: #1e1335;
+  --navigation-item-background-second: #31216c;
+
+  --navigation-item-background-third: #3b2393;
+  --neon-text-color: var(--promo-title-shadow);
+
+  --neon-text-color-2: #17bcff;
+  --pink-1: #ff006e;
+
+  --pink-2: #ff1ead;
+
+  --pink-3: #ff4081;
+  --pink-bright: #ff1ead;
+  --pink-pure: #d079b0;
+
+  --prev-section-background: var(--section-background-1);
+  --promo-background: black;
+  --promo-background-top: #181818;
+
+  --promo-content-background: linear-gradient(#0e0e1a, var(--promo-content-background-color));
+
+  --promo-content-background-color: #111111;
+  --promo-content-color: var(--yellow-1);
+  --promo-info-item-size: 160px;
+
+  --promo-title-color: #e5e5e5;
+  --promo-title-first-color: #9461d6;
+  --promo-title-gradient: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  --promo-title-gradient: linear-gradient(145deg, #e81cff, #40c9ff);
+  --promo-title-radial-background: var(--accent-color-2);
+
+  --promo-title-second-color: #0095d5;
+  --promo-title-shadow: #00ffff;
+
+  --promo-title-third-color: #5f6ecc;
+
+  --promoContent-icon-size: 40px;
+
+  --registration-button-accent: var(--accent-color-2);
+
+  --registration-button-background: #000000;
+  --registration-button-border: #ffffff;
+
+  --registration-button-color: #ffffff;
+  --registration-button-shadow: #1f4c65;
+  --scroll-background: #533475;
+  --scroll-track-color: #7b3d86;
+  --section-background: var(--section-background-2);
+
+  --section-background-1: linear-gradient(90deg, var(--section-background-color-1-sides), var(--section-background-color-1) 50%, var(--section-background-color-1-sides));
+
+  --section-background-2: linear-gradient(90deg, var(--section-background-color-2-sides), var(--section-background-color-2) 50%, var(--section-background-color-2-sides));
+
+  --section-background-color-1: #7081cf;
+
+  --section-background-color-1-sides: #020206;
+  --section-background-color-2: #5cb2d1;
+  --section-background-color-2-sides: #0b0b22;
+  --section-sides-padding: 20px;
+
+  --section-title-font-color: var(--font-color-2);
+  --section-title-font-size: 2.5rem;
+
+  --section-title-underline-color-first: #1e1335;
+
+  --section-title-underline-color-second: #2a1c57;
+  --stages-legend-size: 170px;
+  --tail-font-color: #0a686e;
+
+  --team-item-background-1: linear-gradient(#17223b, #1c9ad1);
+  --team-item-background-2: linear-gradient(#7a5b11, #d6d637);
+
+  --team-item-background-3: linear-gradient(#4c1536, #bc3285);
+
+  --team-item-background-4: linear-gradient(to bottom, #242149, #6173c8);
+  --text-shadow-color: var(--text-shadow-color-default);
+
+  --text-shadow-color-blue-section: rgb(23, 36, 61, 0.2);
+
+  --text-shadow-color-default: rgba(0, 0, 0, 0.2);
+  --text-shadow-default: 0 4px 4px var(--text-shadow-color);
+
+  --text-shadow-light: 0 3px 3px var(--text-shadow-color);
+  --text-shadow-titles: 0 5px 5px var(--text-shadow-color);
+  --timeline-item-active-background: var(--timeline-items-background-first);
+  --timeline-item-active-shadow: var(--timeline-items-shadow-first);
+  --timeline-item-background-active-1: radial-gradient(#ff3aaf, #bd5995);
+
+  --timeline-item-background-active-2: radial-gradient(#17bcff, #1993c6);
+  --timeline-item-background-active-3: radial-gradient(#eeee54, #aaaa39);
+  --timeline-item-background-default: transparent;
+
+  --timeline-item-margin: 6px;
+
+  --timeline-item-size: 24px;
+  --timeline-last-item-overlay-color: #68337a;
+  --timeline-note-background: var(--violet-bright);
+
+  --timeline-note-border-radius: 10px;
+  --timeline-note-horizontal-margin: 56px;
+
+  --timeline-notes-background: var(--timeline-notes-background-default);
+  --timeline-notes-background-broadcast: linear-gradient(#fefc41, #999819);
+  --timeline-notes-background-default: linear-gradient(#7987cb, #555075);
+
+  --timeline-notes-background-final: linear-gradient(#00b5ff, #0b76a2);
+
+  --timeline-notes-background-last: linear-gradient(#e0afff, #865ca0);
+
+  --timeline-notes-background-test: linear-gradient(#f63eab, #a33f7b);
+
+  --trans-basic: 0.4s;
+  --trans-fast: 0.2s;
+
+  --trans-slow: 0.8s;
+  --violet-bright: #31216d;
+  --yellow-1: #f8e899;
+
+  --yellow-2: #fec849;
+
+  --yellow-3: #ffff01;
+  --yellow-4: #c2a77d;
+
+  --z-index-loader: 50;
+  --z-index-buttons: 10;
+  --z-index-gradient-inner-layer: 3;
+  --z-index-header: 30;
+  --z-index-overlay-layers: 2;
+  --z-index-section-gradient-overlay: 4;
+
+  --z-index-section-inner: 5;
+
+  --z-index-section-top-layer: 7;
+
+  @include mixins.for-740-down {
+    --timeline-item-margin: 8px;
+    --timeline-item-size: 26px;
+    --timeline-note-horizontal-margin: 46px;
+  }
+
+  @include mixins.for-1920-up {
+    --aboutGame-item-padding-bottom: 30px;
+    --aboutGame-item-padding-side: 70px;
+    --aboutGame-item-padding-top: 30px;
+
+    --divider-transform-angle: -2deg;
+
+    --promo-info-item-size: 220px;
+  }
+
+  @include mixins.for-1400-down {
+    --nav-item-sides-padding: 6px;
+  }
+
+  @include mixins.for-1100-down {
+    --aboutGameItem-height: 180px;
+    --gamethones-slider-sides-padding: 280px;
+    --promo-info-item-size: 140px;
+    --promo-title-gradient: var(--logo-color-gradient);
+    --section-background-color-1-sides: #161829;
+    --section-background-color-2-sides: #1d2f48;
+    --stages-legend-size: 156px;
+  }
+  @include mixins.for-1000-down {
+    --aboutGameItem-sides-padding: 10px;
+    --gamethones-slider-sides-padding: 250px;
+  }
+
+  @include mixins.for-850-down {
+    --gamethones-slider-sides-padding: 200px;
+  }
+
+  @include mixins.for-800-down {
+    --default-font-size: 1.15rem;
+    --gamethones-slider-sides-padding: 140px;
+    --section-background-color-1-sides: #2a2e4d;
+    --section-background-color-2-sides: #294660;
+    --subtitle-font-size: 1.3rem;
+    --timeline-note-border-radius: 6px;
+  }
+
+  @include mixins.for-600-down {
+    --aboutGameItem-verticals-padding: 16px;
+    --default-font-size: 1.05rem;
+    --gamethones-slider-sides-padding: 50px;
+    --section-title-font-size: 2.2rem;
+    --timeline-item-size: 25px;
+  }
+
+  @include mixins.for-520-down {
+    --default-font-size: 1rem;
+    --font-color-opposite: #191645;
+    --font-color-opposite-light: #141237;
+
+    --promo-info-item-size: 110px;
+
+    --section-background-color-1-sides: #383e67;
+
+    --section-background-color-2-sides: #325a75;
+
+    --section-title-font-size: 1.9rem;
+    --stages-legend-size: 136px;
+    --subtitle-font-size: 1.2rem;
+    --text-shadow-default: 0 2px 2px var(--text-shadow-color);
+    --text-shadow-light: 0 2px 2px var(--text-shadow-color);
+    --text-shadow-titles: 0 3px 3px var(--text-shadow-color);
+    --timeline-item-margin: 5px;
+    --timeline-item-size: 22px;
+    --timeline-note-border-radius: 4px;
+    --timeline-note-horizontal-margin: 40px;
+  }
+}
