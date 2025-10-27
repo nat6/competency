@@ -1,8 +1,10 @@
-name: Deploy static Next.js to GitHub Pages
+name: Deploy static Next.js to GitHub Pages (setup-gh-pages)
 
 on:
   push:
-    branches: [ main ]
+    branches: [ setup-gh-pages ]
+  pull_request:
+    branches: [ setup-gh-pages ]
   workflow_dispatch:
 
 permissions:
@@ -18,33 +20,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      - name: Install deps
-        run: npm ci
-
-      - name: Build (static export)
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
   deploy:
     needs: build
+    if: github.ref == 'refs/heads/setup-gh-pages'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
