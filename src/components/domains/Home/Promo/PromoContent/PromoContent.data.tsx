@@ -5,9 +5,7 @@
 export const PROMO_TEXTS = [
   {
     id: '1',
-    text: 'Геймтон – это игра для разработчиков. Она может быть любого жанра. ' +
-      'Для успешного прохождения нужны навыки программирования. ' +
-      'Найдите свою стратегию победы и превратите её в работающий код! ',
+    text: 'A hackathon is an intense, fast-paced event where creatives, coders, and innovators team up to build tech solutions from scratch — all in just hours. It’s about bold ideas, rapid prototyping, and pushing limits. All Passion. No Pause. Join to invent, connect, and launch something amazing.',
   },
 ];
 

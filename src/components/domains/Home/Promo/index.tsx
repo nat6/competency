@@ -22,7 +22,7 @@ export const Promo = () => {
       <div className={ styles.promo__container }>
         {/*<RegistrationButton className={ styles.promoRegistrationButton }/>*/}
         <Title/>
-        {/*<PromoContent/>*/}
+        <PromoContent/>
         {/*<GamethonesButton/>*/}
       </div>
     </section>
