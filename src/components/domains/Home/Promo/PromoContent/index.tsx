@@ -10,7 +10,7 @@ import {
 
 // import { InfoItem } from '@/components/domains/Home/Promo/InfoItem/InfoItem';
 
-import styles from '@/components/domains/Home/Promo/PromoContent/PromoContent.module.scss';
+import styles from './PromoContent.module.scss';
 
 
 export const PromoContent = () => {

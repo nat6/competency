@@ -7,7 +7,7 @@ import {
   ADDITIONAL_FONT,
 } from '@/components/domains/Home/Promo/GamethonesButton/GamethonesButton.data';
 
-import styles from '@/components/domains/Home/Promo/GamethonesButton/gamethonesButton.module.scss';
+import styles from './GamethonesButton.module.scss';
 
 
 export const GamethonesButton = () => {

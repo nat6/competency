@@ -5,7 +5,7 @@ import cn from 'clsx';
 //   GAME_NAME,
 // } from '@/app/datspulse/utils/constants/common';
 
-import styles from '@/components/domains/Home/Promo/Title/Title.module.scss';
+import styles from './Title.module.scss';
 
 import {
   SUBTITLE,

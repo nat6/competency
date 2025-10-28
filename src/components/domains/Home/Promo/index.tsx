@@ -9,7 +9,7 @@ import { PromoContent } from '@/components/domains/Home/Promo/PromoContent';
 
 import { GamethonesButton } from '@/components/domains/Home/Promo/GamethonesButton';
 
-import styles from '@/components/domains/Home/Promo/Promo.module.scss';
+import styles from './Promo.module.scss';
 
 
 export const Promo = () => {

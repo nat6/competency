@@ -7,11 +7,13 @@ import {
 import cn from 'clsx';
 
 // import { Footer } from '@/components/domains/Home/Footer';
+/*
 import { Header } from '@/components/domains/Home/Header';
+*/
 
 import { METADATA } from '@/utils/constants';
 
-import '@/styles/home.scss';
+import './../../styles/home.scss';
 
 export const metadata = {
   title: METADATA.title,
@@ -31,7 +33,7 @@ const RatingLayout = ( { children }: { children: React.ReactNode } ) => (
     ) }
   >
 
-    <Header/>
+    {/*<Header/>*/}
     { children }
     {/*<Footer/>*/}
   </div>
