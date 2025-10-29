@@ -6,7 +6,7 @@ import {
 } from '@/app/fonts';
 import cn from 'clsx';
 
-// import { Footer } from '@/components/domains/Home/Footer';
+import { Footer } from '@/components/domains/Home/Footer';
 
 import { Header } from '@/components/domains/Home/Header';
 
@@ -34,7 +34,7 @@ const RatingLayout = ( { children }: { children: React.ReactNode } ) => (
 
     <Header/>
     { children }
-    {/*<Footer/>*/}
+    <Footer/>
   </div>
 );
 

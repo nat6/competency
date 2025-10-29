@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
 import { SECTIONS_DATA } from '@/utils/constants';
 import cn from 'clsx';
 
 import styles from './Header.module.scss';
-// import { MobileNav } from '@/components/domains/Home/Header/MobileNav';
+import { MobileNav } from '@/components/domains/Home/Header/MobileNav';
 import { Nav } from '@/components/domains/Home/Header/Nav';
 import {
   useEffect,
@@ -73,7 +73,7 @@ export const Header = () => {
 
       <div className={ styles.mobile }>
         <div className={ styles.mobileActions }>
-          {/*<MobileNav/>*/ }
+          <MobileNav/>
         </div>
       </div>
     </header>

@@ -17,9 +17,7 @@ import {
 } from '@/components/domains/Home/Header/Nav/type';
 import { NavItem } from '@/components/domains/Home/Header/NavItem';
 
-import {
-  SECTIONS_DATA,
-} from '@/utils/constants';
+import { SECTIONS_DATA } from '@/utils/constants';
 
 export const Nav = ( props: INavProps ) => {
   const { activeSection, navRef } = props;

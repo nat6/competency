@@ -1,0 +1,163 @@
+.wrapper {
+  position: relative;
+}
+
+.burger {
+  border-radius: 9999px;
+  transition: all 0.2s ease-in-out;
+  z-index: 30;
+  width: 40px;
+  height: 40px;
+  padding-bottom: 2px;
+  line-height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.burger:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+.panel {
+  backdrop-filter: blur(8px);
+  max-width: 330px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  height: 100dvh;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Tailwind's shadow-2xl */
+  background: var(--header-background);
+}
+
+.headerRow {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;  /* 16px */
+  padding-right: 1rem;
+  padding-top: 0.75rem; /* 12px */
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.headerLeft,
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.closeBtn {
+  width: 40px;
+  height: 40px;
+  line-height: 100%;
+  border-radius: 9999px;
+  font-size: 1.5rem; /* 2xl */
+  transition: all 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  color: white;
+}
+
+.content {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.level {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.backBtn {
+  height: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 18px;
+  padding-right: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 0.75rem; /* 12px */
+  border-radius: 0.5rem; /* 8px */
+  transition: all 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.backBtn:hover {
+  color: white;
+}
+
+.backText {
+  font-size: 0.75rem; /* text-xs */
+  line-height: 100%;
+}
+
+.mobileItem {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.75rem; /* 12px */
+  border-radius: 0.5rem; /* 8px */
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  font-size: 1rem; /* text-base */
+  font-weight: 600; /* semibold */
+  text-transform: uppercase;
+  color: #e4e4e7; /* zinc-200 */
+  transition: all 0.2s ease-in-out;
+  background: linear-gradient(120deg, rgba(12, 12, 14, 0.96), rgba(6, 6, 8, 0.98));
+  box-shadow:
+      0 6px 18px rgba(0, 0, 0, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+  text-align: left;
+}
+
+.mobileItem:hover {
+  background: linear-gradient(120deg, rgba(22, 12, 26, 0.98), rgba(8, 8, 10, 1));
+}
+
+.mobileItem .icon {
+  height: 1.25rem; /* 20px */
+  width: 1.25rem;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.mobileItem .label {
+  font-size: 0.875rem; /* text-sm */
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.subNavLink {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* 8px */
+  border-radius: 0.75rem; /* 12px */
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+  background: linear-gradient(180deg, rgba(8, 8, 10, 0.7), rgba(6, 6, 7, 0.8));
+}
