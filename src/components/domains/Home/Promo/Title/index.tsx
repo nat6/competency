@@ -21,7 +21,7 @@ export const Title = () => {
       <h2 className={ styles.title__text }>
         { TITLE }
       </h2>
-      <div className={ cn(styles.title__text, styles.title__subtitle, 'fontMichroma')  }>
+      <div className={ cn( styles.title__text, styles.title__subtitle, 'fontMichroma' ) }>
         { SUBTITLE }
       </div>
     </div>

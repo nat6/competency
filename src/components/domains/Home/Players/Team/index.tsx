@@ -23,7 +23,7 @@ import {
 //   ADDITIONAL_FONT,
 // } from '@/app/datspulse/utils/constants/common';
 
-import styles from '@/components/domains/Home/Players/Team/Team.module.scss';
+import styles from './Team.module.scss';
 
 
 export const Team = ( { item }: { item: ITeam } ) => {
@@ -119,20 +119,20 @@ export const Team = ( { item }: { item: ITeam } ) => {
         <div className={ styles.team__head }>
           <div className={ styles.team__headIconWrapper }>
             <div className={ cn( styles.team__headIcon,
-            {/*                     // ADDITIONAL_FONT.className,*/}
-            ) }            >
-            {/*     style={ { backgroundImage: `url(${ IMAGES[iconNum] })` } }*/}
-            {/*>*/}
-            {/*  {*/}
-            {/*    isEventWinner &&*/}
-            {/*    <div className={ styles.team__coin }>*/}
-            {/*      <div className={ cn( styles.team__coinFace, styles.team__coinHead ) }*/}
-            {/*           style={ { backgroundImage: `url(${ coinImg })` } }*/}
-            {/*      ></div>*/}
-            {/*      <div className={ cn( styles.team__coinFace, styles.team__coinTail ) }*/}
-            {/*      ></div>*/}
-            {/*    </div>*/}
-            {/*  }*/}
+                                 {/*                     // ADDITIONAL_FONT.className,*/ },
+            ) }>
+              {/*     style={ { backgroundImage: `url(${ IMAGES[iconNum] })` } }*/ }
+              {/*>*/ }
+              {/*  {*/ }
+              {/*    isEventWinner &&*/ }
+              {/*    <div className={ styles.team__coin }>*/ }
+              {/*      <div className={ cn( styles.team__coinFace, styles.team__coinHead ) }*/ }
+              {/*           style={ { backgroundImage: `url(${ coinImg })` } }*/ }
+              {/*      ></div>*/ }
+              {/*      <div className={ cn( styles.team__coinFace, styles.team__coinTail ) }*/ }
+              {/*      ></div>*/ }
+              {/*    </div>*/ }
+              {/*  }*/ }
             </div>
           </div>
 
@@ -145,50 +145,50 @@ export const Team = ( { item }: { item: ITeam } ) => {
                               },
           ) }
           >
-            {/*<div className={ cn( styles.team__additional,*/}
-            {/*                     {*/}
-            {/*                       [styles.team__additional_small]: technology.length > 40,*/}
-            {/*                     },*/}
-            {/*) }*/}
-            {/*>*/}
-            {/*<span*/}
-            {/*  className={ cn(*/}
-            {/*    styles.team__location,*/}
-            {/*  ) }*/}
-            {/*>*/}
-            {/*  [{ item.countryShort }]*/}
-            {/*</span>*/}
+            {/*<div className={ cn( styles.team__additional,*/ }
+            {/*                     {*/ }
+            {/*                       [styles.team__additional_small]: technology.length > 40,*/ }
+            {/*                     },*/ }
+            {/*) }*/ }
+            {/*>*/ }
+            {/*<span*/ }
+            {/*  className={ cn(*/ }
+            {/*    styles.team__location,*/ }
+            {/*  ) }*/ }
+            {/*>*/ }
+            {/*  [{ item.countryShort }]*/ }
+            {/*</span>*/ }
 
-            {/*  <span className={ styles.team__technology }>*/}
-            {/*  { technology }*/}
-            {/*</span>*/}
-            {/*</div>*/}
+            {/*  <span className={ styles.team__technology }>*/ }
+            {/*  { technology }*/ }
+            {/*</span>*/ }
+            {/*</div>*/ }
             <div className={ styles.team__name }>
               { name }
             </div>
 
           </h3>
 
-          {/*<div className={ styles.team__achievements }>*/}
-          {/*  {*/}
-          {/*    item.participations > 0 &&*/}
-          {/*    (*/}
-          {/*      <div className={ cn( styles.team__achievementsItem, styles.team__achievementsPart ) }*/}
-          {/*           data-team-part-tooltip={ TEAM_ITEM_TOOLTIPS.team.part.common }*/}
-          {/*           style={ { backgroundImage: `url(${ ICONS.starSrc })` } }*/}
-          {/*      ></div>*/}
-          {/*    )*/}
-          {/*  }*/}
-          {/*  {*/}
-          {/*    item.wins > 0 &&*/}
-          {/*    (*/}
-          {/*      <div className={ cn( styles.team__achievementsItem, styles.team__achievementsWin ) }*/}
-          {/*           data-team-part-tooltip={ TEAM_ITEM_TOOLTIPS.team.win.common }*/}
-          {/*           style={ { backgroundImage: `url(${ ICONS.winSrc })` } }*/}
-          {/*      ></div>*/}
-          {/*    )*/}
-          {/*  }*/}
-          {/*</div>*/}
+          {/*<div className={ styles.team__achievements }>*/ }
+          {/*  {*/ }
+          {/*    item.participations > 0 &&*/ }
+          {/*    (*/ }
+          {/*      <div className={ cn( styles.team__achievementsItem, styles.team__achievementsPart ) }*/ }
+          {/*           data-team-part-tooltip={ TEAM_ITEM_TOOLTIPS.team.part.common }*/ }
+          {/*           style={ { backgroundImage: `url(${ ICONS.starSrc })` } }*/ }
+          {/*      ></div>*/ }
+          {/*    )*/ }
+          {/*  }*/ }
+          {/*  {*/ }
+          {/*    item.wins > 0 &&*/ }
+          {/*    (*/ }
+          {/*      <div className={ cn( styles.team__achievementsItem, styles.team__achievementsWin ) }*/ }
+          {/*           data-team-part-tooltip={ TEAM_ITEM_TOOLTIPS.team.win.common }*/ }
+          {/*           style={ { backgroundImage: `url(${ ICONS.winSrc })` } }*/ }
+          {/*      ></div>*/ }
+          {/*    )*/ }
+          {/*  }*/ }
+          {/*</div>*/ }
 
         </div>
 

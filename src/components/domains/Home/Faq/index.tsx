@@ -22,33 +22,33 @@ export const Faq = () => {
       className={ cn( styles.faq, 'section' ) }
       sectionTitle={ SECTIONS_DATA.faq.title }
     >
-        <div className={ styles.faq__wrapper }>
-          { FAQ_LIST.map( ( item: IFaqItem ) => (
-            <div key={ item.id } className={ styles.faq__item }>
-              <div className={ cn( styles.faq__itemTitle ) }>
+      <div className={ styles.faq__wrapper }>
+        { FAQ_LIST.map( ( item: IFaqItem ) => (
+          <div key={ item.id } className={ styles.faq__item }>
+            <div className={ cn( styles.faq__itemTitle ) }>
 
-                { item.theme.map( ( element, index ) => (
-                  <span key={ element.id }>
+              { item.theme.map( ( element, index ) => (
+                <span key={ element.id }>
                   { element.text }
-                    {/* whitespace for inner spans -- good theme subtitles splitting at the mobile screens */ }
-                    { ( index !== item.theme.length - 1 && item.theme.length > 1 ) &&
-                      (
-                        ' '
-                      )
-                    }
+                  {/* whitespace for inner spans -- good theme subtitles splitting at the mobile screens */ }
+                  { ( index !== item.theme.length - 1 && item.theme.length > 1 ) &&
+                    (
+                      ' '
+                    )
+                  }
                 </span>
-                ) ) }
-              </div>
-              <Collapse
-                bordered={ false }
-                // expandIcon={ ( { isActive } ) => <CaretRightOutlined rotate={ isActive ? 90 : 0 }/> }
-                accordion
-                items={ item.content }
-                className={ styles.faq__accordion }/>
+              ) ) }
             </div>
-          ) ) }
-        </div>
-</BaseSection>
+            <Collapse
+              bordered={ false }
+              // expandIcon={ ( { isActive } ) => <CaretRightOutlined rotate={ isActive ? 90 : 0 }/> }
+              accordion
+              items={ item.content }
+              className={ styles.faq__accordion }/>
+          </div>
+        ) ) }
+      </div>
+    </BaseSection>
   );
 };
 

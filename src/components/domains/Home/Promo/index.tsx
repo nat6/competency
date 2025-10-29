@@ -20,10 +20,10 @@ export const Promo = () => {
       <Background/>
 
       <div className={ styles.promo__container }>
-        {/*<RegistrationButton className={ styles.promoRegistrationButton }/>*/}
+        {/*<RegistrationButton className={ styles.promoRegistrationButton }/>*/ }
         <Title/>
         <PromoContent/>
-        {/*<GamethonesButton/>*/}
+        {/*<GamethonesButton/>*/ }
       </div>
     </section>
   );

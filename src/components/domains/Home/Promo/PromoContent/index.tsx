@@ -16,9 +16,9 @@ import styles from './PromoContent.module.scss';
 export const PromoContent = () => {
   return (
     <div className={ cn( styles.promoContent ) }>
-      {/*{ PROMO_INFO.map( ( item: IInfoItem ) => (*/}
-      {/*  <InfoItem key={ item.id } item={ item }/>*/}
-      {/*) ) }*/}
+      {/*{ PROMO_INFO.map( ( item: IInfoItem ) => (*/ }
+      {/*  <InfoItem key={ item.id } item={ item }/>*/ }
+      {/*) ) }*/ }
 
       <div className={ cn( styles.promoContent__inner ) }>
         { PROMO_TEXTS.map( ( item: IPromoContentText ) => (

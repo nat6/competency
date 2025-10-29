@@ -21,30 +21,30 @@ export const Partners = () => {
       className={ cn( styles.partners, 'section' ) }
       sectionTitle={ SECTIONS_DATA.partners.title }
     >
-        <div className={ styles.partners__inner }>
-          { PARTNERS_LIST.map( ( item: IPartnersItem ) => (
-              <Link className={ styles.partners__item }
-                    key={ item.id }
-                    target="_blank"
-                    href={ item.link }
-              >
-                <div
-                  className={ styles.partners__link }
-                  style={ { backgroundImage: `url(${ item.img })` } }
-                >
+      <div className={ styles.partners__inner }>
+        { PARTNERS_LIST.map( ( item: IPartnersItem ) => (
+          <Link className={ styles.partners__item }
+                key={ item.id }
+                target="_blank"
+                href={ item.link }
+          >
+            <div
+              className={ styles.partners__link }
+              style={ { backgroundImage: `url(${ item.img })` } }
+            >
+            </div>
+            {
+              item.note && (
+                <div className={ styles.partners__noteWrapper }>
+                  <div className={ styles.partners__note }>
+                    { item.note }
+                  </div>
                 </div>
-                {
-                  item.note && (
-                    <div className={ styles.partners__noteWrapper }>
-                      <div className={ styles.partners__note }>
-                        { item.note }
-                      </div>
-                    </div>
-                  )
-                }
-              </Link>
-          ) ) }
-        </div>
+              )
+            }
+          </Link>
+        ) ) }
+      </div>
     </BaseSection>
   );
 };

@@ -1,4 +1,4 @@
-import styles from '@/components/domains/Home/Prizes/Prize/Prize.module.scss';
+import styles from './Prize.module.scss';
 
 import { IPrize } from '@/components/domains/Home/Prizes/Prize/type';
 
@@ -13,13 +13,13 @@ export const Prize = ( { item }: { item: IPrize } ) => {
              style={ { backgroundImage: `url(${ item.img })` } }>
         </div>
       </div>
-      {/*<div className={ styles.card__front }>*/}
-      {/*  <div className={ styles.card__header }>*/}
-      {/*    <div className={ styles.card__icon }*/}
-      {/*         style={ { backgroundImage: `url(${ item.icon })` } }*/}
-      {/*    ></div>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
+      {/*<div className={ styles.card__front }>*/ }
+      {/*  <div className={ styles.card__header }>*/ }
+      {/*    <div className={ styles.card__icon }*/ }
+      {/*         style={ { backgroundImage: `url(${ item.icon })` } }*/ }
+      {/*    ></div>*/ }
+      {/*  </div>*/ }
+      {/*</div>*/ }
     </div>
   );
 };

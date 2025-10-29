@@ -1,5 +1,5 @@
 import { PRIZES_LIST } from '@/components/domains/Home/Prizes/Prizes.data';
-import styles from '@/components/domains/Home/Prizes/Prizes.module.scss';
+import styles from './Prizes.module.scss';
 import cn from 'clsx';
 
 import {

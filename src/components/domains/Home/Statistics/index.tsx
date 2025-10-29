@@ -1,5 +1,3 @@
-'use client';
-
 import cn from 'clsx';
 
 import { BaseSection } from '@/components/domains/Home/common/BaseSection';

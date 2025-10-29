@@ -1,10 +1,9 @@
-"use client";
 import cn from 'clsx';
 
 import { SECTIONS_DATA } from '@/utils/constants';
 
 import { STAGES_DESCRIPTION } from '@/components/domains/Home/Stages/Stages.data';
-import styles from '@/components/domains/Home/Players/Players.module.scss';
+import styles from './Players.module.scss';
 import type { ITeam } from '@/components/domains/Home/Players/Team/type';
 import { Team } from '@/components/domains/Home/Players/Team';
 

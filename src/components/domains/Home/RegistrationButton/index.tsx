@@ -1,5 +1,3 @@
-'use client';
-
 import React, {
   useState,
   useRef,
@@ -22,7 +20,7 @@ import {
 
 import { GAME_DATES } from '@/utils/constants/dates';
 
-import styles from '@/components/domains/Home/RegistrationButton/registrationButton.module.scss';
+import styles from './registrationButton.module.scss';
 
 
 export const RegistrationButton = ( { className = '' }: IRegistrationButton ) => {
@@ -44,7 +42,8 @@ export const RegistrationButton = ( { className = '' }: IRegistrationButton ) =>
   }
 
   if ( now < stop ) {
-    // buttonUrl = source ? MAIN_BUTTON.registration.link + '-source-' + clearSource( source ) : MAIN_BUTTON.registration.link;
+    // buttonUrl = source ? MAIN_BUTTON.registration.link + '-source-' + clearSource( source ) :
+    // MAIN_BUTTON.registration.link;
     buttonText = MAIN_BUTTON.registration.menuText;
   } else {
     buttonUrl = MAIN_BUTTON.broadcast.link;
@@ -74,7 +73,7 @@ export const RegistrationButton = ( { className = '' }: IRegistrationButton ) =>
   return (
     <Link href={ buttonUrl }
           onMouseEnter={ handleRippleEffect }
-          // className={ cn( ADDITIONAL_FONT.className, styles.button, className ) }
+      // className={ cn( ADDITIONAL_FONT.className, styles.button, className ) }
 
           className={ cn( styles.button, className ) }
 

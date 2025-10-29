@@ -3,7 +3,7 @@
 import { SECTIONS_DATA } from '@/utils/constants';
 import cn from 'clsx';
 
-import styles from '@/components/domains/Home/Header/Header.module.scss';
+import styles from './Header.module.scss';
 // import { MobileNav } from '@/components/domains/Home/Header/MobileNav';
 import { Nav } from '@/components/domains/Home/Header/Nav';
 import {
@@ -67,13 +67,13 @@ export const Header = () => {
       <div className={ styles.desktop }>
         <Nav activeSection={ activeSection }
           // @ts-ignore
-          navRef={ navRef }
+             navRef={ navRef }
         />
       </div>
 
       <div className={ styles.mobile }>
         <div className={ styles.mobileActions }>
-          {/*<MobileNav/>*/}
+          {/*<MobileNav/>*/ }
         </div>
       </div>
     </header>

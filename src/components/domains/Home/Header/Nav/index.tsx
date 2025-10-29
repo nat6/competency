@@ -1,4 +1,3 @@
-'use client';
 import cn from 'clsx';
 import { INavItem } from '@/components/domains/Home/Header/type';
 import {
@@ -12,7 +11,7 @@ import {
   useState,
 } from 'react';
 
-import styles from '@/components/domains/Home/Header/Nav/Nav.module.scss';
+import styles from './Nav.module.scss';
 import {
   INavProps,
 } from '@/components/domains/Home/Header/Nav/type';
